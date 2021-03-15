@@ -1,0 +1,23 @@
+1
+Jaka jednostka ma zawsze 8 bitów?
+Oktet
+
+2
+Czy bajt zawsze ma 8 bitów?
+Nie zawsze, ale zazwyczaj tak.
+
+3
+Ile bitów ma nibble?
+4
+
+4
+Co wyznacza szerokość szyny adresowej?
+Maksymalną wielkość pamięci fizycznej.
+
+5
+Jak nazywamy podstawową porcję informacji, na której operuje system komputerowy?
+Słowo maszynowe
+
+6
+Jak nazywamy binarny zapis rozkazów procesora?
+Kod maszynowy
