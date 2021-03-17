@@ -1,3 +1,7 @@
+deck_id: 737682189
+deck_name: SO 
+file_id: wyklad-1
+
 1
 Jaka jednostka ma zawsze 8 bitów?
 Oktet
@@ -36,7 +40,7 @@ Rozkazu sterującego
 
 10
 Czym jest tryb adresowania?
-Sposobem podawania miejsca, skąd brane są elementy rozkazków.
+Sposobem podawania miejsca, skąd brane są elementy rozkazów.
 
 11
 Kiedy tryb adresowania jest natychmiastowy?
