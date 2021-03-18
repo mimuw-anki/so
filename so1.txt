@@ -1,0 +1,75 @@
+deck_id: 1585586387
+deck_name: Systemy Operacyjne 
+file_id: wyklad-1
+
+1
+Jaka jednostka ma zawsze 8 bitów?
+Oktet
+
+2
+Czy bajt zawsze ma 8 bitów?
+Nie zawsze, ale zazwyczaj tak.
+
+3
+Ile bitów ma nibble?
+4
+
+4
+Co wyznacza szerokość szyny adresowej?
+Maksymalną wielkość pamięci fizycznej.
+
+5
+Jak nazywamy podstawową porcję informacji, na której operuje system komputerowy?
+Słowo maszynowe
+
+6
+Jak nazywamy binarny zapis rozkazów procesora?
+Kod maszynowy
+
+7
+Przykładem jakiego rozkazu jest mov?
+Rozkazu przesyłania
+
+8
+Przykładem jakiego rozkazu są not, neg?
+Rozkazu arytmetyczno-logicznego
+
+9
+Przykładem jakiego rozkazu jest jmp?
+Rozkazu sterującego
+
+10
+Czym jest tryb adresowania?
+Sposobem podawania miejsca, skąd brane są elementy rozkazów.
+
+11
+Kiedy tryb adresowania jest natychmiastowy?
+Kiedy argument jest podany bezpośrednio w rozkazie, np.: mov ebx, 7
+
+12
+Kiedy tryb adresowania jest bezpośredni?
+Gdy w rozkazie jest podany adres argumentu, np.: mov [address], ebx
+
+13
+Kiedy tryb adresowania nazywamy rejestrowym?
+Kiedy argumentami są rejestry, np.: mov edx, ebx
+
+14
+Kiedy tryb adresowania jest pośredni?
+Gdy adres jest wyliczany, np. znajduje się w jakimś rejestrze np.: or [rax], ecx
+
+15
+Jak działa negacja arytmetyczna w U2?
+Negujemy wszystkie bity i dodajemy jedynkę.
+
+16
+Jak porównuje się dwie liczby X i Y?
+Wykonuje się odejmowanie X - Y, bez zapisywania wyniku, a następnie sprawdzane są flagi.
+
+17
+Jak działa dzielenie przez 2 w U2?
+Przesuwamy liczbę o jeden bit w prawo, a najstarszy bit (z lewej) powielamy.
+
+18
+Rozwiń skrót ABI.
+Application Binary Interface
