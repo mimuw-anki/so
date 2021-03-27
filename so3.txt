@@ -1,0 +1,51 @@
+deck_id: 1585586387
+deck_name: Systemy Operacyjne 
+file_id: wyklad-3
+
+1
+Rozwiń skrót CISC.
+Complex Instruction Set Computer
+
+2
+Rozwiń skrót RISC.
+Reduced Instruction Set Computer
+
+3
+Która architektura charakteryzuje się dużą ilością rozkazów i małą liczbą rejestrów?
+CISC
+
+4
+W której architekturze rozkazy arytmetyczno-logiczne są wykonywane tylko na rejestrach?
+RISC
+
+5
+Na czym polega przetwarzanie potokowe?
+Jest to zrównoleglanie wykonywania rozkazów poprzez wykonywanie równolegle różnych faz kolejnych rozkazów.
+
+6
+Jakie są kolejne fazy przetwarzania rozkazu?
+1. Odczytanie rozkazu <br> 2. Odkodowanie <br> 3. Wykonanie <br> 4. Dostęp do pamięci <br> 5. Zapis wyniku
+
+7
+Wymień rodzaje problemów zależności zasobów.
+- strukturalne <br>- define-use <br>- load-use
+
+8
+Na czym polega strukturalna zależność zasobów?
+Dwa rozkazy na różnych etapach wykonania potrzebują dostępu do tego samego sprzętu.
+
+9
+Na czym polega zależność zasobów define-use?
+Jakiś rozkaz potrzebuje wyniku poprzedniego rozkazu.
+
+10
+Na czym polega zależność zasobów load-use?
+Jakiś rozkaz potrzebuje danych ładowanych z pamięci przez poprzedni rozkaz.
+
+11
+Na czym polega data forwarding?
+Wynik wyliczony na etapie E pierwszego rozkazu przesyła się bezpośrednio do etapu E drugiego rozkazu.
+
+12
+Czym jest latency?
+Jest to dodatkowe opóźnienie wprowadzane przez rozkaz, gdy następny rozkaz potrzebuje jego wyniku (na przykład przy load-use).
