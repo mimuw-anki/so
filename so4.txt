@@ -1,0 +1,15 @@
+deck_id: 1585586387
+deck_name: Systemy Operacyjne 
+file_id: wyklad-4
+
+1
+Co oznacza jednorodność?
+System dostarcza aplikacjom jednolity sposób postrzegania sprzętu.
+
+2
+Co oznacza wirtualizacja?
+System może stwarzać wrażenie istnienia w komputerze pewnych zasobów (wielu procesorów, ogromnej pamięci).
+
+3
+Czym był spooling?
+Podczas wykonania zadania system czyta następne zadanie z czytnika na dysk i drukuje na dysku wyniki poprzedniego.
