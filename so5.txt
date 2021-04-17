@@ -1,0 +1,75 @@
+deck_id: 1585586387
+deck_name: Systemy Operacyjne 
+file_id: wyklad-5
+
+1
+Czym jest proces?
+Wykonaniem progamu.
+
+2
+Co zawiera przestrzeń adresowa procesu?
+-kod programu <br>-dane <br>-stos procesu
+
+3
+Na czym polega translacja adresów?
+Przestrzeń adresowa jest <b>sprzętowo</b> odwzorowywana na pamięć fizyczną.
+
+4
+Jakie elementy określają przebieg wykonania procesu?
+-licznik rozkazów <br>-wskaźnik stosu <br>-rejestry
+
+5
+Gdzie system przechowuje informacje o procesach?
+W tablicy procesów.
+
+6
+Jak nazywa się element tablicy procesów?
+Blok kontrolny procesu (PCB).
+
+7
+Na czym polega podział czasu w kontekście procesów?
+Każdy proces otrzymuje kwant czasu, po jego wykorzystaniu procesor odkłada wykonanie procesu i rozpoczyna wykonywanie innego.
+
+8
+Czym jest przełączenie kontekstu?
+Odkładanie wykonania jednego procesu i rozpoczęcie wykonania innego przez procesor.
+
+9
+Jak implementowane są przerwania?
+Po wykryciu przerwania i zakończeniu cyklu aktualnego rozkazu sprzęt zapamiętuje na stosie adres powrotu i obsługuje przerwanie. Po obsłużeniu, odtwarzany jest adres powrotu.
+
+10
+Co zawiera tablica przerwań?
+Adresy procedur obsługujących przerwania.
+
+11
+Jak działają operacje wejścia i wyjścia?
+1. System inicjuje operację w imieniu procesu i zajmuje się innym procesem. <br>2. Sprzęt sprowadza dane do pamięci (bez użycia procesora). <br>3. Po zakończeniu operacji, sprzęt zgłasza przerwanie.
+
+12
+Wymień poziomy ochrony systemu od najmniejszej do największej ochrony.
+0. Jądro <br>1. System<br>2. Rozszerzenia <br>3.Aplikacja
+
+13
+W jakim trybie uruchamiane są procesy użytkowe?
+W trybie użytkownika.
+
+14
+W jakim trybie obsługiwane są przerwania?
+W trybie uprzywilejowanym.
+
+15
+Jaki problem rozwiązuje szeregowanie <b>krótkoterminowe</b>?
+Wybór kolejnego procesu  do wykonania.
+
+16
+Jaki problem rozwiązuje szeregowanie <b>długoterminowe</b>?
+Wybór procesu do wprowadzenia do systemu.
+
+17
+Jakie fazy składają się na wykonanie procesu?
+Fazy procesora i fazy wejścia-wyjścia.
+
+18
+W jakich systemach szeregowanie długoterminowe jest nieobecne lub mocno zredukowane?
+W systemach z podziałem czasu.
