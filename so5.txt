@@ -8,7 +8,7 @@ Wykonaniem progamu.
 
 2
 Co zawiera przestrzeń adresowa procesu?
--kod programu <br>-dane <br>-stos procesu
+-Kod programu. <br>-Dane. <br>-Stos procesu.
 
 3
 Na czym polega translacja adresów?
@@ -35,7 +35,7 @@ Czym jest przełączenie kontekstu?
 Odkładanie wykonania jednego procesu i rozpoczęcie wykonania innego przez procesor.
 
 9
-Jak implementowane są przerwania?
+Jak obsługiwane są przerwania przez system?
 Po wykryciu przerwania i zakończeniu cyklu aktualnego rozkazu sprzęt zapamiętuje na stosie adres powrotu i obsługuje przerwanie. Po obsłużeniu, odtwarzany jest adres powrotu.
 
 10
