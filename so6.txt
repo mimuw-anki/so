@@ -1,0 +1,75 @@
+deck_id: 1585586387
+deck_name: Systemy Operacyjne 
+file_id: wyklad-6
+
+1
+Na czym polega szeregowanie <b>nie</b>wywłaszczające?
+Proces może dobrowolnie oddać procesor systemowi, ale system nie zabierze mu go siłą.
+
+2
+W jakim rodzaju szeregowania krótkoterminowego system operacyjny może odebrać procesor procesowi?
+W szeregowaniu wywłaszczającym.
+
+3
+Czym się różni jądro wywłaszczalne od niewywłaszczalnego?
+W jądrze wywłaszczalnym kontekst jest przełączany od razu, a w niewywłaszczalnym po zakończeniu wywołania systemowego lub po wstrzymaniu procesu na operacji wejścia-wyjścia (ale proces może się zrzec procesora wcześniej).
+
+4
+Jaki moduł nazywamy ekspedytorem?
+Jest to moduł realizujący przekazanie procesora procesowi wybranemu przez planistę.
+
+5
+Jak nazywamy czas od wstrzymania jednego procesu do uaktywnienia drugiego?
+Opóźnienie ekspedycji.
+
+6
+Czym jest wykorzystanie procesora?
+Procent czasu, w którym procesor jest zajęty pracą.
+
+7
+Czym jest przepustowość?
+Liczba procesów kończonych w jednostce czasu.
+
+8
+Jak nazywamy czas od chwili nadejścia procesu do systemu do chwili jego zakończenia?
+Czas obrotu zadania.
+
+9
+Czym jest czas oczekiwania?
+Łączny czas spędzony przez proces w kolejce procesów gotowych.
+
+10
+Jak nazywamy czas między wysłaniem żądania do procesu, a rozpoczęciem przez niego odpowiedzi na nie?
+Czas odpowiedzi (lub reakcji).
+
+11
+Jaka jest główna różnica w szeregowaniu między systemami wsadowymi i interakcyjnymi?
+W systemach wsadowych procesy mogą otrzymywać procesor na dłużej, a w interakcyjnych proces nie może monopolizować procesora, więc wywłaszczanie jest niezbędne.
+
+12
+Na czym polega algorytm szeregowania First-Come First-Served (FCFS)?
+Bloki kontrolne procesów wrzucane są do kolejki i obsługiwane po kolei.
+
+13
+Na czym polega algorytm szeregowania Shortest Job First (SJF)?
+Zachłannie wybierany jest proces o najkrótszej kolejnej fazie procesora.
+
+14
+Jak działa algorytm szeregowania Shortest Remaining Time First (SRTF)?
+Gdy pojawia się nowy proces o krótszej fazie procesora niż długość fazy która pozostała obecnemu procesowi, następuje wywłaszczenie.
+
+15
+Jak działa algorytm szeregowania rotacyjnego (round-robin, RR)?
+Tak jak algorytm FCFS (kolejka), ale co kwant czasu wywoływany proces jest wywłaszczany i wraca do kolejki.
+
+16
+Na czym polega algorytm szeregowania wielopoziomowego?
+-Są osobne kolejki dla różnych grup procesów (systemowe, czasu rzeczywistego itd.), a każda kolejka ma własny algorytm szeregowania (np. FCFS, RR). <br>-Procesy systemowe mają priorytet przed interakcyjnymi. <br>-Kolejka procesów systemowych otrzymuje 80% czasu procesora.
+
+17
+Jak działa sprzężenie zwrotne w algorytmie szeregowania wielopoziomowego?
+-Procesory nie są przypisane na stałe do konkretnej kolejki. <br>-Jeśli proces zużywa dużo czasu, to jest przenoszony do kolejki o niższym priorytecie.
+
+18
+Jak działa algorytm szeregowania loteryjnego?
+1. Procesy otrzymują losy na zasoby (np. na procesor). <br>2. SO urządza loterię w miarę potrzeby. <br>3. Zwycięzca otrzymuje zasób. <br> 4. Niektóre procesy mogą otrzymać więcej losów, a współpracujące ze sobą mogą się nimi wymieniać.
