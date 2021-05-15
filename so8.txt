@@ -1,0 +1,47 @@
+deck_id: 1585586387
+deck_name: Systemy Operacyjne 
+file_id: wyklad-8
+
+1
+Co wylicza algorytm bankiera?
+Sprawdza, czy dany stan jest bezpieczny.
+
+2
+Jaka jest główna idea algorytmu bankiera?
+Wybieramy proces którego żądania możemy zaspokoić, symulujemy przydział zasobów (i kończymy proces) i powtarzamy te kroki dopóki istnieje taki proces. Jeśli po zakończeniu każdy proces się zakończył, to stan jest bezpieczny.
+
+3
+Co to znaczy że stan jest bezpieczny?
+Oznacza to, że system może przydzielić zasoby każdemu procesowi w stopniu maksymalnym bez zakleszczenia.
+
+4
+Jak można wykorzystać algorytm bankiera do zapobiegania zakleszczeniom?
+Po otrzymaniu zamówienia na zasoby sprawdzamy czy da się je wykonać, a następnie symulujemy przydział zasobów i sprawdzamy za pomocą algorytmu bankiera czy otrzymany stan jest bezpieczny - jeśli tak to wykonujemy przydział.
+
+5
+Jaki problem powoduje zamiana adresów symbolicznych na fizyczne podczas kompilacji?
+Powstaje program, który jest nierelokowalny.
+
+6
+Jaka jest główna wada zamiany adresów symbolicznych na fizyczne podczas ładowania?
+Program nie może zostać przeniesiony w inne miejsce pamięci w czasie wykonania.
+
+7
+Jak działa wiązanie podczas wykonywania?
+Kompilator produkuje program z adresami logicznymi, które przy każdym odwołaniu sprzęt przekształca na adres fizyczny.
+
+8
+Jaki problem powoduje łączenie statyczne?
+Każdy moduł ładowalny zawiera własną kopię modułów bibliotecznych.
+
+9
+Jak działa <b>ładowanie</b> dynamiczne?
+Moduł ładowalny zawiera jedynie program główny, a pozostałe moduły znajdują się na dysku i są ładowane, gdy są potrzebne.
+
+10
+Na czym polega <b>łączenie</b> dynamiczne?
+Moduł ładowalny zawiera informacje o tym, jakie moduły są potrzebne do wykonania, a system je ładuje gdy są potrzebne.
+
+11
+Który sposób linkowania sprawia, że moduł wykorzystywany przez wiele aplikacji znajdzie się w pamięci tylko raz?
+Łączenie dynamiczne.
