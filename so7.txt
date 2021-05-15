@@ -1,0 +1,131 @@
+deck_id: 1585586387
+deck_name: Systemy Operacyjne 
+file_id: wyklad-7
+
+1
+Ile jest poziomów priorytetów procesów i jak są interpretowane przy szeregowaniu w Linuxie na jądrze 2.6?
+Jest ich 140, od 0 do 99 to procesy czasu rzeczywistego (nadzorcy), od 100 do 139 to procesy zwykłe. Im mniejsza wartość, tym wyższy priorytet.
+
+2
+Jak kolejki priorytetowe są wykorzystywane przy szeregowaniu w Linuxie na jądrze 2.6?
+Każdy procesor ma dwie kolejki priorytetowe: <br>- Procesy aktywne, które nie wykonały całego przydzielonego kwantu czasu. <br>- Procesy nieaktywne (przeterminowane), które wykorzystały swój limit czasu. <br> Do wykonania wybieramy proces o najwyższych priorytecie z kolejki procesów aktywnych. Jeśli nie ma aktywnych, wszystkie nieaktywne stają się aktywne.
+
+3
+Jak szeregowane są procesy zwykłe (między sobą) w Linuxie na jądrze 2.6?
+- Każdy proces ma wartość <i>nice</i> z zakresu od -20 do 19, jego priorytet jest równy 120 + nice. <br>- Przydzielany czas jest zależny od priorytetu. <br>- Zadania o tym samym priorytecie są szeregowane algorytmem round-robin.
+
+4
+Jak zmienia się priorytet procesów zwykłych podczas szeregowania w Linuxie na jądrze 2.6?
+- Zadania interakcyjne otrzymują bonus do -5. <br>- Zadania ograniczane procesorem otrzymują karę do +5. <br>- Ocenę, czy zadanie jest interakcyjne ustalane jest na podstawie czasu uśpienia.
+
+5
+Co się dzieje ze zwykłym procesem po zakończeniu swojego kwantu czasu podczas szeregowania w Linuxie na jądrze 2.6?
+Oceniany jest poziom interaktywności, proces interakcyjny może ponownie zostać umieszczony jako aktywny, w przeciwnym razie przelicza się mu priorytet i umieszcza do kolejki nieaktywnych.
+
+6
+Jak szeregowane są procesy czasu rzeczywistego w Linuxie na jądrze 2.6?
+Albo według niewywłaszczalnego FCFS, albo według RR. Priorytetów się nie przelicza.
+
+7
+Wymień warstwy procesów w MINIXie.
+1. Zadanie zegara, zadanie systemowe. <br>2. Zadania obsługujące urządzenia. <br>3. Procesy systemowe. <br>4. Procesy użytkowników.
+
+8
+Ile kolejek do szeregowania procesów jest standardowo w MINIXie?
+16
+
+9
+Jak MINIX przydziela kwant czasu procesom systemowym?
+- Procesy systemowe są wywłaszczalne, ale otrzymują bardzo duży kwant czasu. <br>- Po jego zużyciu procesy znów stają się gotowe. <br>- System obniża priorytet procesu, jeśli jest jedynym gotowym do wykonania. <br>- Jeśli proces wykorzysta swój kwant, ale inne procesy będą miały szansę się wykonać, podwyższa się jego priorytet.
+
+10
+Jak MINIX przydziela kwant czasu zwykłym procesom?
+Szereguje je za pomocą RR, proces który nie wykorzystał kwantu po powrocie do stanu gotowości wraca na początek kolejki i może wykorzystać tylko pozostałą część kwantu. Proces, który kwant wykorzystał idzie na koniec kolejki.
+
+11
+Czym jest system reaktywny?
+Jest to system, który działa w sposób ciągły, otrzymując dane od pewnych układów sprzętowych i przesyłając wyniki innym.
+
+12
+Czym jest system czasu rzeczywistego?
+Jest to system reaktywny, który spełnia ścisłe ograniczenia na czas reakcji.
+
+13
+Czym jest zadanie w systemie czasu rzeczywistego?
+Jest to inna nazwa na proces.
+
+14
+Czym jest termin uwolnienia w systemie czasu rzeczywistego?
+Chwila, gdy zadanie dołącza do kolejki procesów gotowych.
+
+15
+Czym jest czas wykonania w systemie czasu rzeczywistego?
+Maksymalny czas trwania wykonania zadania.
+
+16
+Czym jest czas reakcji w systemie czasu rzeczywistego?
+Czas od chwili uwolnienia zadania do chwili zakończenia jego wykonania.
+
+17
+Czym jest termin ostateczny w systemie czasu rzeczywistego?
+Maksymalny dopuszczalny czas odpowiedzi zadania.
+
+18
+Jakie mogą być terminy ostateczne?
+Sztywne (hard) - zadanie nigdy nie może przekroczyć terminu ostatecznego<br>elastyczne (soft) - termin może być przekroczony z określonym prawdopodobieństwem (w szczególności zawsze)
+
+19
+Jakie są rodzaje zadań w systemie czasu rzeczywistego?
+Okresowe, sporadyczne, nieokresowe.
+
+20
+Co charakteryzuje zadania <b>okresowe<b/> w systemie czasu rzeczywistego?
+Kolejne terminy uwolnienia są od siebie odległe o ustalony czas.
+
+21
+Co charakteryzuje zadania <b>sporadyczne<b/> w systemie czasu rzeczywistego?
+Nie są okresowe i mają sztywne terminy ostateczne.
+
+22
+Co charakteryzuje zadania <b>nieokresowe<b/> w systemie czasu rzeczywistego?
+Nie są okresowe i mają elastyczne terminy ostateczne.
+
+23
+Czym jest i do czego wykorzystuje się ramę w szeregowaniu synchronicznym?
+Rama to przedział czasu procesora o ustalonej długości. Program dzieli się na zadania i każde zadanie musi się zakończyć w ciągu jednej ramy.
+
+24
+Czym jest tablica szeregująca w szeregowaniu synchronicznym?
+Zawiera przypisanie zadań do ram, jest konstruowana z góry.
+
+25
+Wymień metody szeregowania w systemach czasu rzeczywistego.
+Synchroniczne, asynchroniczne.
+
+26
+Co oznacza odwrócenie priorytetów w szeregowaniu asynchronicznym?
+Zadanie o niższym priorytecie wykonuje się, gdy zadanie o wysokim priorytecie czeka.
+
+27
+Jak zapobiega się odwróceniu priorytetów w szeregowaniu asynchronicznym?
+Za pomocą dziedziczenia priorytetów.
+
+28
+Czym jest dziedziczenie priorytetów?
+Proces przebywający w sekcji krytycznej ma tymczasowo zwiększony priorytet, równy priorytetowi procesu czekającego na wejście do niej. Po SK przywraca się pierwotny priorytet.
+
+29
+Kiedy przydział procesora jest sensowny?
+Kiedy da się zagwarantować, że wszystkie zadania zakończą się przed upływem terminu ostatecznego.
+
+30
+Kiedy algorytm szeregowania jest optymalny w danej klasie algorytmów?
+Jeśli istnieje algorytm tej samej klasy szeregujący sensownie, to A też uszereguje sensownie.
+
+31
+Wymień algorytmy szeregowania w systemach czasu rzeczywistego.
+- według malejących przerw (rate monotonic) <br>- najbliższy termin ostateczny najpierw
+
+32
+Wymień warunki konieczne zakleszczenia.
+- niepodzielność co najmniej jednego zasobu<br>- przetrzymanie (zasobu) i oczekiwanie <br>- brak wywłaszczeń <br>- czekanie cykliczne
