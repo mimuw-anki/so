@@ -36,7 +36,7 @@ Ile kolejek do szeregowania procesów jest standardowo w MINIXie?
 
 9
 Jak MINIX przydziela kwant czasu procesom systemowym?
--Procesy systemowe są wywłaszczalne, ale otrzymują bardzo duży kwant czasu. <br>- Po jego zużyciu procesy znów stają się gotowe. <br>- System obniża priorytet procesu, jeśli jest jedynym gotowym do wykonania. <br>- Jeśli proces wykorzysta swój kwant, ale inne procesy będą miały szansę się wykonać, podwyższa się jego priorytet.
+- Procesy systemowe są wywłaszczalne, ale otrzymują bardzo duży kwant czasu. <br>- Po jego zużyciu procesy znów stają się gotowe. <br>- System obniża priorytet procesu, jeśli jest jedynym gotowym do wykonania. <br>- Jeśli proces wykorzysta swój kwant, ale inne procesy będą miały szansę się wykonać, podwyższa się jego priorytet.
 
 10
 Jak MINIX przydziela kwant czasu zwykłym procesom?
@@ -72,7 +72,7 @@ Maksymalny dopuszczalny czas odpowiedzi zadania.
 
 18
 Jakie mogą być terminy ostateczne?
-Sztywne (hard) - zadanie nigdy nie może przekroczyć t erminu ostatecznego<br>elastyczne (soft) - termin może być przekroczony z określonym prawdopodobieństwem (w szczególności zawsze)
+Sztywne (hard) - zadanie nigdy nie może przekroczyć terminu ostatecznego<br>elastyczne (soft) - termin może być przekroczony z określonym prawdopodobieństwem (w szczególności zawsze)
 
 19
 Jakie są rodzaje zadań w systemie czasu rzeczywistego?

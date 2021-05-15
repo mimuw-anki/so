@@ -15,8 +15,8 @@ Czym się różni jądro wywłaszczalne od niewywłaszczalnego?
 W jądrze wywłaszczalnym kontekst jest przełączany od razu, a w niewywłaszczalnym po zakończeniu wywołania systemowego lub po wstrzymaniu procesu na operacji wejścia-wyjścia (ale proces może się zrzec procesora wcześniej).
 
 4
-Jaki moduł nazywamy ekspedytorem?
-Jest to moduł realizujący przekazanie procesora procesowi wybranemu przez planistę.
+Czym zajmuje się moduł nazywany ekspedytorem?
+Realizowaniem przekazania procesora procesowi wybranemu przez planistę.
 
 5
 Jak nazywamy czas od wstrzymania jednego procesu do uaktywnienia drugiego?
@@ -64,7 +64,7 @@ Tak jak algorytm FCFS (kolejka), ale co kwant czasu wywoływany proces jest wyw�
 
 16
 Na czym polega algorytm szeregowania wielopoziomowego?
--Są osobne kolejki dla różnych grup procesów (systemowe, czasu rzeczywistego itd.), a każda kolejka ma własny algorytm szeregowania (np. FCFS, RR). <br>-Procesy systemowe mają priorytet przed interakcyjnymi. <br>-Kolejka procesów systemowych otrzymuje 80% czasu procesora.
+-Są osobne kolejki dla różnych grup procesów (systemowe, czasu rzeczywistego itd.), a każda kolejka ma własny algorytm szeregowania (np. FCFS, RR). <br>-Procesy systemowe mają priorytet przed interakcyjnymi. <br>-Obowiązują dodatkowe zasady wyboru kolejki (np. priorytet jednej nad drugą).
 
 17
 Jak działa sprzężenie zwrotne w algorytmie szeregowania wielopoziomowego?
