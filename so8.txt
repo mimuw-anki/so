@@ -48,4 +48,4 @@ Który sposób linkowania sprawia, że moduł wykorzystywany przez wiele aplikac
 
 12
 Jak sprzęt obsługuje odczyt z pamięci?
-Procesor umieszcza adres na szynie <b>adresowej</b>, pamięć go odczytuje i umieszcza zawartość pod tym adresem na szynie <b>danych</b>, a procesor z niej odczytuje wynik;
+Procesor umieszcza adres na szynie <b>adresowej</b>, pamięć go odczytuje i umieszcza zawartość pod tym adresem na szynie <b>danych</b>, a procesor z niej odczytuje wynik.
