@@ -47,7 +47,7 @@ Do czego wykorzystuje się bufor translacji adresów strony (TLB)?
 Do skrócenia czasu potrzebnego do translacji adresów stron.
 
 12
-Z czego składają się komówki bufora translacji adresów?
+Z czego składają się komórki bufora translacji adresów?
 Z klucza (numer strony) i wartości (numer ramki).
 
 13
@@ -56,7 +56,7 @@ Klucz, który mamy jest porównywany równocześnie z kluczami we wszystkich kom
 
 14
 Jak się korzysta z bufora translacji adresów?
-1. Wyszukujemy po numerze strony (kluczu). <br>2. Jeśli znaleźliśmy wartość, nie ma potrzeby sięgania do tablicy stron. <br>3. W przeciwnym razie to numer ramki jest pobierany z tablicy stron i dodawany do bufora.
+1. Wyszukujemy po numerze strony (kluczu). <br>2. Jeśli znaleźliśmy wartość, nie ma potrzeby sięgania do tablicy stron. <br>3. W przeciwnym razie numer ramki jest pobierany z tablicy stron i dodawany do bufora.
 
 15
 Co oznacza trafienie w TLB?
