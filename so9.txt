@@ -1,0 +1,63 @@
+deck_id: 1585586387
+deck_name: Systemy Operacyjne 
+file_id: wyklad-9
+
+1
+Na czym polega zarządzanie pamięcią poprzez wymianę?
+W pamięci przebywają tylko niektóre procesy, gdy jakiemuś kończy się kwant czasu to zostaje przesłany na dysk, a na jego miejsce wchodzi inny proces.
+
+2
+Na czym polega zarządzanie pamięcią za pomocą stref statycznych?
+Pamięć dzielona jest na obszary, każdy o ustalonym rozmiarze. Gdy proces się zgłasza, szuka się dla niego wystarczająco dużego obszaru.
+
+3
+Na czym polega przydział ciągły pamięci?
+Procesy otrzymują ciągły blok pamięci. 
+
+4
+Czym są dziury w kontekście ciągłego przydziału pamięci?
+Są to spójne obszary wolnej pamięci.
+
+5
+Co oznacza fragmentacja <b>wewnętrzna</b>?
+Część fragmentu pamięci przydzielonego procesowi nie jest wykorzystywana.
+
+6
+Co oznacza fragmentacja <b>zewnętrzna</b>?
+Wolne obszary pamięci wystarczyłyby w sumie do spełnienia zapotrzebowania procesu, ale nie stanowią spójnego obszaru.
+
+7
+Czym różni się ramka od strony w stronicowaniu?
+Ramka jest fragmentem pamięci fizycznej, a strona fragmentem pamięci logicznej. Mają taki sam rozmiar.
+
+8
+Czym jest tablica stron?
+Jest to odwzorowanie numerów stron na numery ramek.
+
+9
+Z czego składa się adres logiczny w stronicowaniu?
+Z numeru strony i przesunięcia w obrębie tej strony.
+
+10
+Co dokonuje translacji adresu w stronicowaniu - sprzęt czy system?
+Sprzęt
+
+11
+Do czego wykorzystuje się bufor translacji adresów strony (TLB)?
+Do skrócenia czasu potrzebnego do translacji adresów stron.
+
+12
+Z czego składają się komórki bufora translacji adresów?
+Z klucza (numer strony) i wartości (numer ramki).
+
+13
+Jak wyszukuje się wartość w buforze translacji adresów?
+Klucz, który mamy jest porównywany równocześnie z kluczami we wszystkich komórkach.
+
+14
+Jak się korzysta z bufora translacji adresów?
+1. Wyszukujemy po numerze strony (kluczu). <br>2. Jeśli znaleźliśmy wartość, nie ma potrzeby sięgania do tablicy stron. <br>3. W przeciwnym razie numer ramki jest pobierany z tablicy stron i dodawany do bufora.
+
+15
+Co oznacza trafienie w TLB?
+Numer strony został znaleziony w buforze translacji adresów.
