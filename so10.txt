@@ -1,0 +1,59 @@
+deck_id: 1585586387
+deck_name: Systemy Operacyjne 
+file_id: wyklad-10
+
+1
+Jaka idea stoi za wielopoziomowymi tablicami stron?
+Tablice stron także podlegają stronicowaniu.
+
+2
+Wymień sposoby organizacji tablicy stron.
+-haszowana tablica stron <br>-"odwrotna" tablica stron
+
+3
+Jak wygląda odwrotna tablica stron?
+Mamy po jednej pozycji dla każdej <b>ramki</b>, trzymamy informacje o numerze strony w danej ramce i procesie do którego należy.
+
+4
+Wymień zalety stronicowania.
+-brak fragmentacji zewnętrznej (nie ma dziur) <br>-segmentacja wewnętrzna (niewykorzystywanie całej pamięci) na co najwyżej jednej stronie <br>-możliwość współdzielenia pamięci
+
+5
+Na jakiej idei polega pamięć wirtualna?
+Nie wszystkie strony procesu muszą znajdować się w pamięci operacyjnej, część z nich może przebywać w pamięci pomocniczej.
+
+6
+Czym jest bit poprawności odwołania w pamięci wirtualnej?
+Zawiera informację o tym, czy strona w tablicy stron znajduje się w pamięci operacyjnej, czy na dysku.
+
+7
+Jak sprowadzana jest strona do pamięci podczas korzystania z pamięci wirtualnej?
+1. Sprzęt stronicujący wykrywa nieustawiony bit poprawności odwołania i generuje błąd braku strony. <br>2. System znajduje wolną ramkę i zleca sprowadzenie strony z dysku. <br>3. System modyfikuje tablicę stron, procesor wznawia przerwany rozkaz.
+
+8
+Wymień algorytmy zastępowania stron.
+-FIFO (kolejkowanie) <br>-Least Recently Used (LRU) <br>-Least/Most Frequently Used (LFU/MFU)
+
+9
+Jak działa algorytm FIFO zastępowania stron?
+Strony są kolejkowane, a gdy zabraknie miejsca, usuwana jest strona, która została sprowadzona najdawniej.
+
+10
+Czym jest Anomalia Belady'ego?
+W niektórych algorytmach zastępowania stron ilość braku stron może wzrosnąć wraz ze wzrostem liczby wolnych ramek.
+
+11
+Na czym polega optymalny algorytm zastępowania stron?
+Za każdym razem zastępujemy stronę, która najdłużej nie będzie używana w przyszłości. Jest to algorytm nieimplementowalny.
+
+12
+Na czym polega algorytm LRU zastępowania stron?
+Usuwamy stronę, która nie była użyta od najdłuższego czasu.
+
+13
+Na czym polega algorytm przybliżający LRU zwany algorytmem <b>drugiej szansy</b>?
+Strony mają bit odwołania, zapalany gdy występuje odwołanie do niej. Stronę do zastąpienia wybieramy za pomocą FIFO, jeśli bit odwołania jest zapalony to go gasimy i szukamy dalej, a jeśli nie to wybieramy tę stronę.
+
+14
+Wymień sztuczki stosowane przy wymianie stron.
+-pula wolnych ramek <br>-zapamiętywanie ostatniej strony w wolnej ramce <br>-lista zmodyfikowanych stron
