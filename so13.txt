@@ -1,0 +1,35 @@
+deck_id: 1585586387
+deck_name: Systemy Operacyjne 
+file_id: wyklad-13
+
+1
+Gdzie przechowywane są atrybuty pliku?
+W i-węźle (ang. i-node)
+
+2
+Gdzie przechowywany jest numer i-węzła danego pliku?
+W katalogu, w którym znajduje się plik.
+
+3
+Czym w rzeczywistości jest deskryptor pliku?
+Indeksem obiektu w tablicy, w której system trzyma dane otwartych plików. Jest związany z konkretnym procesem.
+
+4
+Czy otwarte przez proces pliki są zamykane gdy kończy on działanie?
+Tak
+
+5
+Jakie rodzaje blokad na plik w celu zabezpieczenia przed równoczesnym dostępem istnieją?
+- doradzane <br>- obowiązkowe <br>Istnieją też blokady wyłączne i współdzielone działające na zasadzie czytelników i pisarzy.
+
+6
+Czym różnica się doradzana blokada na plik od obowiązkowej?
+Doradzana chronią plik jedynie przed procesami, które sprawdzają, czy blokada jest nałożona. Obowiązkowa powoduje, że jądro odrzuca operacje naruszające blokadę.
+
+7
+Jak nazywamy operację polegającą na tym, że system plików przyłącza się do istniejącej struktury systemu plików?
+Montowanie
+
+8
+Jak wygląda standardowa struktura systemu plików?
+Katalog główny ma podstawowy system plików, a pozostałe są przyłączane do niego i mogą go przesłonić. 
