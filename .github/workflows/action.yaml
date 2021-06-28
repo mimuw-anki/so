@@ -1,0 +1,58 @@
+name: git-anki-generate-deck
+
+# Marketplace data. Might be useful once we figure out how to use it as a module.
+# description: Generates anki deck from git-anki formatted files in repo.
+
+# branding:
+#   color: yellow
+#   icon: aperture
+  
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build_release:
+    name: build_release
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: get git-anki
+        run: git clone https://github.com/mimuw-anki/git-anki.git && pip3 install -r git-anki/requirements.txt
+      - name: generate
+        run: cd git-anki && python3 main.py release ..
+      - name: Get Time
+        id: time
+        uses: nanzm/get-time-action@v1.1
+        with:
+          timeZone: 0
+          format: 'YYYY-MM-DD-HH-mm-ss'
+      - name: release
+        uses: actions/create-release@v1
+        id: create_release
+        with:
+          draft: false
+          prerelease: false
+          tag_name: ${{ steps.time.outputs.time }}
+          release_name: Generated deck
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: upload deck
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./deck.apkg
+          asset_name: deck.apkg
+          asset_content_type: application/zip
