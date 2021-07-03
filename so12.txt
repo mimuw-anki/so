@@ -55,7 +55,7 @@ Czym jest plik?
 Logicznym pojemnikiem na dane.
 
 14
-Jaką postać może mieć przestrzeń nazw w którą zorganizowane są pliki?
+Jaką postać może mieć przestrzeń nazw, w którą zorganizowane są pliki?
 -płaską <br>-drzewiastą <br>-grafu acyklicznego
 
 15
