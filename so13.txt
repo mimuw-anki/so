@@ -24,7 +24,7 @@ Jakie rodzaje blokad na plik w celu zabezpieczenia przed równoczesnym dostępem
 
 6
 Czym różnica się doradzana blokada na plik od obowiązkowej?
-Doradzana chronią plik jedynie przed procesami, które sprawdzają, czy blokada jest nałożona. Obowiązkowa powoduje, że jądro odrzuca operacje naruszające blokadę.
+Doradzana chroni plik jedynie przed procesami, które sprawdzają, czy blokada jest nałożona. Obowiązkowa powoduje, że jądro odrzuca operacje naruszające blokadę.
 
 7
 Jak nazywamy operację polegającą na tym, że system plików przyłącza się do istniejącej struktury systemu plików?
