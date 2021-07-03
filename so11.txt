@@ -1,6 +1,6 @@
 deck_id: 1585586387
 deck_name: Systemy Operacyjne 
-file_id: wyklad-5
+file_id: wyklad-11
 
 1
 Czym się różni globalne zastępowanie strony od lokalnego?
