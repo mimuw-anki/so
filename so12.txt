@@ -1,0 +1,63 @@
+deck_id: 1585586387
+deck_name: Systemy Operacyjne 
+file_id: wyklad-12
+
+1
+Jakie istnieją rodzaje urządzeń?
+-blokowe <br>-znakowe <br>Istnieją też urządzenia niepasujące do tego podziału.
+
+2
+Jak działają urządzenia blokowe?
+Informacje trzyma się w blokach o ustalonym rozmiarze. Bloki są odczytywane i zapisywane niezależnie od siebie.
+
+3
+Jak działają urządzenia znakowe?
+Odczytują i zapisują <b>strumień</b> znaków bez struktury.
+
+4
+Jak działa adresowanie współczesnych dysków?
+Dysk jest traktowany jak tablica bloków logicznych, odwzorowywana na sektory, ścieżki i cylindry. Odwzorowanie ukrywa sektory uszkodzone i zastępuje je rezerwowymi.
+
+5
+Jaki jest cel planowania dostępów do dysku?
+Minimalizacja ruchu głowicy dysku.
+
+6
+Wymień strategie planowania dostępów do dysku.
+-First Come First Served (FCFS) <br>-Shortest Seek Time First (SSTF) <br>-SCAN/C-SCAN <br>- LOOK/C-LOOK
+
+7
+Na czym polega strategia SCAN planowania dostępów do dysku?
+Głowica przechodzi od jednej krawędzi do drugiej, po czym zmienia kierunek omiatania.
+
+8
+Czym różnia się strategie planowania dostępu do dysku C-SCAN i SCAN?
+C-SCAN po jednym przejściu natychmiast wraca do pierwotnego położenia, nie obsługując nic po drodze, SCAN zmienia kierunek omiatania.
+
+9
+Czym różni się strategia LOOK/C-LOOK od strategii SCAN/C-SCAN?
+Głowica nie dochodzi do krawędzi dysku, ale do najbardziej skrajnego zamówienia.
+
+10
+Jak nazywamy układ elektroniczny, który steruje pracą urządzenia?
+Sterownik
+
+11
+Jak realizuje się komunikację między komputerem i sterownikiem?
+Poprzez porty wejścia-wyjścia lub operacje odwzorowywane w pamięci operacyjnej.
+
+12
+Czym jest system plików?
+Jest to podsystem SO umożliwiający tworzenie plików, dostęp i operacje na nich.
+
+13
+Czym jest plik?
+Logicznym pojemnikiem na dane.
+
+14
+Jaką postać może mieć przestrzeń nazw, w którą zorganizowane są pliki?
+-płaską <br>-drzewiastą <br>-grafu acyklicznego
+
+15
+Czym jest dowiązanie?
+Odniesieniem do pliku w katalogu.
