@@ -1,0 +1,43 @@
+deck_id: 1585586387
+deck_name: Systemy Operacyjne 
+file_id: wyklad-11
+
+1
+Czym się różni globalne zastępowanie strony od lokalnego?
+Zastępowanie lokalne polega na zastąpieniu innej strony należącej do procesu, przy zastępowaniu globalnym zastępowana strona może należeć do dowolnego procesu.
+
+2
+Na czym polega problem zwany migotaniem stron?
+Proces nie ma wystarczającej liczby ramek, a wszystkie strony są aktywnie używane więc często wystepują braki stron.
+
+3
+Jaki jest główny problem przy migotaniu stron, gdy stosowana jest <b>lokalna</b> strategia zastępowania?
+Proces często wymienia strony, więc spędza na tym więcej czasu niż na wykonywaniu kodu.
+
+4
+Jaki jest główny problem przy migotaniu stron w przypadku <b>globalnej</b> strategii zastępowania?
+"Migotający" proces podbiera ramki innym, przez co one mają ten sam problem i spada wykorzystanie CPU.
+
+5
+Czym jest zbiór roboczy w kontekście zastępowania stron?
+Zbiorem roboczym procesu jest zbiór stron, których dotyczyło ostatnie X (parametr) odwołań.
+
+6
+Czym jest zapotrzebowanie na ramki?
+Zapotrzebowanie to ilość elementów w zbiorach roboczych (niedawno używanych stron) wszystkich procesów. 
+
+7
+Do czego SO wykorzystuje zapotrzebowanie na ramki?
+Gdy zapotrzebowanie przekroczy łączną liczbę ramek, pewien proces jest wstrzymywany, a jego strony są usuwane z pamięci.
+
+8
+Jak obsługiwana jest pamięć po wywołaniu fork()?
+Korzysta się z Copy-on-Write - oba procesy współdzielą te same strony oznaczone jako tylko do odczytu, przy próbie zapisu system kopiuje stronę i odwzorowuje ją na przestrzeń adresową odpowiedniego procesu.
+
+9
+Jak można oszczędzić ilość operacji wejścia-wyjścia podczas przetwarzania pliku?
+Można odwzorować plik na pamięć.
+
+10
+Na czym polega odwzorowanie pliku na pamięć?
+Blok dyskowy jest odwzorowywany na stronę procesu, dostęp do pliku ogranicza się do zwykłych odczytów i zapisów pamięci. Zamknięcie pliku powoduje zapis na dysk.
